@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  appsearchpython:
+    image: appsearchpython
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: /bin/bash
+    command: -c "pip install debugpy -t /tmp && python /tmp/debugpy --wait-for-client --listen 0.0.0.0:5678 -m flask run --no-debugger --no-reload --host 0.0.0.0 --port 5000"
+    ports:
+      - 5000
+      - 5678:5678
+    environment:
+      - FLASK_APP=main.py

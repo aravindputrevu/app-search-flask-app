@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	<!-- Create title for browser tabs & Favorites -->
+	<title>App Search Python Demo</title>
+	<!-- This site is responsive. Use full screen width. -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Ensure use of most common Unicode characters -->
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static',     filename='css/spectre.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',     filename='css/spectre-exp.css') }}">
+	<style>
+		/* Add whitespace to emphasize explanatory text. */
+		.explanation { margin-left: 25%; margin-right: 25%; } 
+
+		/* Dropshadow effect for navbar. */
+		.navshadow { box-shadow: 2px 2px 2px lightgrey; }
+	</style>
+</head>
+<body>
+	<!-- Construct top navbar -->
+	<header class="navbar navshadow" style="padding: 1rem;" >
+		<!-- Logo on the left -->
+		<div class="navbar-primary">	
+			<a href="/" class="navbar-brand"><span class="text-large">PyCloud</span></a>
+		</div>
+		<!-- Supporting links on on the right -->
+	</header>
+
+
+	<div class="container centered">
+		<h1 class="text-center" style="margin-top: 5%;">App Search</h1>
+		<p class="text-center text-large explanation">Simple, yet powerful</p>
+		<div class="columns" style="margin-left: 33%;width: 100%;margin-right: 35%;">
+
+			<div class="column col-4 text-center">
+
+				<!-- Without mt-2 style this "pushes up" the center column --> 
+				<div class="card navshadow">
+                    <form action = "/search" method = "POST">
+					<div class="card-body form-group">
+						<section class="navbar-center">
+                            <div class="input-group input-inline">
+                              <div class="form-autocomplete">
+                                <div class="form-autocomplete-input">
+                                    <input class="form-input" type="text" name="search" placeholder="type here">
+                                    <button class="btn btn-primary input-group-btn">Search</button>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                    </div><!-- .card-body -->
+                    </form> 
+				</div><!-- .card -->
+
+			</div><!-- .column .col-4 -->
+			
+        </div><!-- .columns -->
+        {% block content %}
+        {% endblock %}
+
+	</div><!--  .container -->
+</body>

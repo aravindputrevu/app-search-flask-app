@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask Tutorial</title>
+  </head>
+  <body>
+
+    {% extends "template.html" %}
+
+    {% block content %}
+    <div class="container centered">
+		
+        <div class="columns" style="margin-left: 15%; margin-right: 15%;">
+            {% for d in data['results'] %}
+			<div class="column col-4 text-center">
+				<!-- mt-2 style pushes down left & right columns --> 
+				<div class="card mt-2">
+                    <div class="card-image">
+                        <img src="{{ d.poster_path.raw }}" class="img-responsive">
+                      </div>
+					<div class="card-header bg-gray">
+						<div class="card-title">
+							<h2><a href="{{ d.poster_path.raw }}">{{ d.original_title.raw }}</a></h2>			
+						</div><!-- .card-title -->    
+					</div><!--- .card-header -->
+					<div class="card-body">
+                        <p> Runtime: {{ d.runtime.raw }} minutes</p>
+                        <p>Released on: {{d.release_date.raw}}</p>
+                        <p>IMDB Rating: {{d.imdb_rating.raw}} / 10</p>
+					</div><!-- .card-body --> 
+				</div><!-- .card -->
+			
+            </div><!-- .column .col-4 -->
+            {% endfor %}
+        </div><!-- columns -->
+    </div><!-- container -->
+
+    {% endblock %}
+
+   
+
+
+  </body>
+</html>
