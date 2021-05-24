@@ -3,5 +3,10 @@
         "base_endpoint":"",
         "api_key":"",
         "engine_name":""
+    },
+    "apm":{
+        "server_url": "",
+        "service_name":"",
+        "secret_token":""
     }
 }
