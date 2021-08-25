@@ -1,0 +1,23 @@
+{
+  "name": "app-search-flask-app",
+  "version": "1.0.0",
+  "description": "Search with Flask and App Search",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "postcss static/src/style.css -o static/css/main_min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aravindputrevu/app-search-flask-app.git"
+  },
+  "author": "Aravind Putrevu",
+  "bugs": {
+    "url": "https://github.com/aravindputrevu/app-search-flask-app/issues"
+  },
+  "homepage": "https://github.com/aravindputrevu/app-search-flask-app#readme",
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "autoprefixer": "^10.3.2",
+    "tailwindcss": "^2.2.7"
+  }
+}
