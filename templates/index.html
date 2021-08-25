@@ -4,38 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PyCharm</title>
-  <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
 </head>
 
 <body>
-  <div class="bg-gray-700 px-3 py-1">
-    <h2 class="text-3xl font-light text-white m-0">PyCharm 2021</h2>
-  </div>
-  <div class="justify-center pl-60 ml-96">
-      <form action ="/search" method = "POST">
-          <input type="text" placeholder="Search here..." name="search"
-                 class="border-2 border-gray-700 mt-10 w-2/5 py-3 px-4"></input>
-          <button class="bg-blue-700 text-xl hover:bg-blue-500 text-white py-2 px-3">
-              Search
-          </button>
-      </form>
-  </div>
-  {% block content %}
-  <div class="justify-items-center">
-    <div class="grid gap-8 grid-cols-3 mt-5 ">
-        {% for d in data['results'] %}
-      <div
-        class="transition duration-500 ease-in-out flex py-3 px-2 hover:bg-blue-400 transform hover:-translate-y-1 hover:scale-110 hover:text-white hover:shadow-none hover:rounded border border-gray-300 shadow-lg">
-        <img src="{{ d.poster_path.raw }}" class="h-16 w-12 mr-20 ml-8 mt-10" alt="Image">
-        <div class="w-3/5 mr-0">
-          <h2 class="text-gray-800 font-bold">{{ d.original_title.raw }}</h2>
-          <p>{{ d.summary.raw }}</p>
-        </div>
-      </div>
-        {% endfor %}
-    </div>
-  </div>
-  {% endblock %}
+ <h1>Hello, PyCharm world</h1>
 </body>
 
 </html>
