@@ -1,0 +1,12 @@
+{
+    "appsearch":{
+        "base_endpoint":"",
+        "api_key":"",
+        "engine_name":""
+    },
+    "elasticsearch":{
+        "cloud_id":"",
+        "api_key":"",
+        "api_key_secret":""
+    }
+}

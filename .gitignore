@@ -1,8 +1,5 @@
 /node_modules/
-venv/
-.idea/
-.vscode
 static/.DS_Store
 static/css/.DS_Store
 .DS_Store
-
+/env
