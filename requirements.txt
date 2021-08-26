@@ -1,2 +1,4 @@
 # To ensure app dependencies are ported from your virtual environment/host machine into your container, run 'pip freeze > requirements.txt' in the terminal to overwrite this file
 flask==1.1.1
+elasticsearch==7.14.0
+elasticsearch-dsl==7.4.0
