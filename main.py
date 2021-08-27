@@ -1,6 +1,4 @@
-import datetime
 import json
-from datetime import datetime as dt
 
 from elasticsearch import Elasticsearch, helpers, ElasticsearchException
 from elasticsearch_dsl import Search
@@ -10,7 +8,6 @@ app = Flask(__name__)
 
 with open("config.json") as json_data_file:
     config = json.load(json_data_file)
-
 
 es = Elasticsearch(
     cloud_id=config['elasticsearch']['cloud_id'],
